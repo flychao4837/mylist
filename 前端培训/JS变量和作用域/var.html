@@ -1,0 +1,103 @@
+<html>
+<head>
+</head>
+
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+	// var global="GLOBAL";
+	// const global_const = "global_const";
+	// const global_const ="asss" //const定义后必须负责，且不可重复定义，重复赋值
+	// global_const = "test"
+</script>
+<script type="text/javascript">
+	//for if try等表达式内定义的变量 按词法作用域分析，
+	//在当前函数上下文内都可引用，不存在 只在if、for try等表达式内有效的局部变量
+	var i =1;
+	var a
+	if(i==1){
+		var a = 2;
+	}
+	alert("a = "+a);
+
+	// for(var j=0;j<=2;j++){  
+ //         var c=3;  
+ //     }  
+ //     alert("c = "+c);//输出3 
+ //   alert("j = "+j) 
+
+ //     for( j in [3]){  
+ //        alert(j)
+ //     }  
+ //    alert("c = "+c);//输出3 
+ //    alert("j = "+j) 
+    
+</script>
+<!--变量作用提升-->
+<script type="text/javascript">
+	///*1*/
+	// var v = "hello";
+	// (function(){
+	// var v ;
+	//   console.log(v);
+	//   v = "world";
+	// })();
+
+	// /*2*/
+	// var v = "hello";
+	// if(true){
+	//   console.log(v);
+	//   var v = "world";
+	// }
+
+	///*同名变量的隐式提升*/
+	//alert(d)
+	// var d = "4d";
+	
+	// //alert(d)
+	// var d = function(){
+	// 	alert("d = "+d);
+	// }
+	
+	// function d(){
+	// 	alert("hoisting")	
+	// }
+	// alert("type = " +typeof(d))
+	// alert(d)
+
+	// /*函数表达式与函数声明的区别*/
+	// (function(){
+	//   //var f1,function f2(){}; //hoisting,被隐式提升的声明
+	 
+	//   f1(); //ReferenceError: f1 is not defined
+	//   f2();
+	 
+	//   var f1 = function(){};
+	//   function f2(){}
+	// })();
+</script>
+<script type="text/javascript">
+	
+	// var str = "This is a string"
+	// try{
+	// 	//var str = "new string";
+	// 	throw a;
+	// }catch(e){
+	// 	alert("e = "+e)
+	// 	alert("str = "+str)
+	// }
+</script>
+<script type="text/javascript">
+// function   a ( i ) {    
+// 	alert ( i ) ;     
+// 	alert ( arguments [ 0 ]) ;
+//  	//arguments[0]应该就是形参 i    
+// 	var   i = 2 ;     
+// 	alert ( i ) ;     
+// 	alert ( arguments [ 0 ]); 
+// } ;
+// a ( 10 ) ;
+
+</script>

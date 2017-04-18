@@ -1,0 +1,64 @@
+<html>
+<head>
+</head>
+
+<body>
+<a onclick="getInfo(this)" id="test" name="a标签">this关键字</a>
+</body>
+</html>
+<script type="text/javascript">
+	// //this指触发事件的对象
+	// function getInfo(v){
+	// 	alert(typeof(v))
+	// 	alert(v.name)
+	// 	alert(v.id)
+	// }
+</script>
+<script type="text/javascript">
+	// //var name = "global" 
+	// function testA(){
+	// 	//alert(this.name)
+	// 	this.name = "testA" //this 指向全局 Windows name变量和say函数 都是windows的属性
+	// 	//alert(this.name)
+	// 	this.say= function(){
+	// 		alert("haha")
+	// 	}
+	// 	//this.say()
+	// }
+	// testA();
+	// alert(this.name)
+	// //this.say()
+</script>
+<script type="text/javascript">
+	// var name ="outSide"
+	// var obj = {
+	// 	set:function(){
+	// 		this.name = "obj"
+	// 	},
+	// 	get:function(){
+	// 		alert(this.name)
+	// 	}
+	// }
+	// obj.set();
+	// obj.get();
+	// alert(this.name)
+</script>
+<script type="text/javascript">
+	// var name ="outSide"
+	// var obj = {
+	// 	set:function(){
+	// 		this.name = "obj"
+	// 	},
+	// 	get:function(){
+	// 		alert(this.name)
+	// 		function add(){
+	// 			this.name = "new add"
+	// 		}
+	// 		add()
+	// 		alert("add Action = "+this.name)
+	// 	}
+	// }
+	// obj.set();
+	// obj.get();
+	// alert(this.name)
+</script>
