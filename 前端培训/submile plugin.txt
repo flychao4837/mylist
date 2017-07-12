@@ -1,0 +1,4 @@
+1、autofilename
+2、jsFormat
+3、emmet
+4、textaligin
