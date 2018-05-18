@@ -1,4 +1,4 @@
-1、python tushare股票数据
+﻿1、python tushare股票数据
 2、react
 3、react bundle + Webpack
 	http://www.mamicode.com/info-detail-1529434.html
@@ -9,3 +9,7 @@
 5、angular2 -> 4
 6、vue.js 
 7、阿里 Weex js+Native 解决方案
+8、rich-editor实现远离 selection+range
+9、文档协同方案 websocket + html格式 + 版本对比 + Dom Tree
+10、canvas-animate svg-animate
+11、animate-timer 定时器的准确性如何保证，帧率如何固定且保持 
