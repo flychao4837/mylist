@@ -1,0 +1,19 @@
+{
+  "name": "smartclass-rc-app",
+  "version": "1.0.0",
+  "description": "smartclass-rc-app（SmartClass Remote Controller，App），教学助手，智慧课堂的App端，远程控制PC端。",
+  "main": "webSocketAdapter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.xuelebj.net/xueleapp/smartclass-rc-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "ws": "^7.0.0"
+  }
+}
