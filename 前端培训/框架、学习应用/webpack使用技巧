@@ -1,0 +1,27 @@
+vue项目webpack使用cdn
+引入cdn是为了减少打包体积，加快渲染速度
+ 
+1.在index.html中引入vue和vue-router
+<script src="https://cdn.bootcss.com/vue/2.6.8/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.2/vue-router.min.js"></script>
+ 
+2.在build文件夹中的webpack.base.conf.js添加
+externals: {
+  'vue': 'Vue',
+  'vue-router': 'VueRouter'
+},
+//格式为： “资源名”:“外部资源名” （注意：外部资源名由模块自身决定，不可更改。）
+//资源名可以是任意字符，是webpack给外部资源定义的别名
+//外部资源名 是外部资源所export暴露到全局的对象名称，
+//查看外部资源名的方法，在index.html文件中引入对应的cdn文件，然后在浏览器打开index.html，
+//控制台输入对应的开头几个字母就可以看到对用的外部资源名. 如：window.v => window.Vue
+ 
+3.删除项目中的对应资源的import引入
+删除main.js中的   
+    import Vue from 'vue'  语句
+删除src/router/index.js中的 
+    import Vue from 'vue'
+    import Router from 'vue-router'
+将Vue.use(Router)改为Vue.use(VueRouter)
+将new Router改为new VueRouter
+ 
