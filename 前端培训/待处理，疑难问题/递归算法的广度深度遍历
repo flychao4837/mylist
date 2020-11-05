@@ -1,0 +1,51 @@
+类似的数据结构如下
+[
+{
+  type：1,
+  name:"结构",
+  children:[
+    {
+      type：11,
+      name:"结构",
+      children:[
+        {
+          type：102,
+          name:"结构",
+          children:[
+
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  type：2,
+  name:"结构",
+  children:[
+  
+  ]
+}
+]
+通过递归算法可找到具体对象值
+this.menuSourceTree = []//用于存储遍历过程中查到的结果
+loopMenuDeep(menu, path) {
+  for (let i = 0, len = menu.length; i < len; i++) {
+    let item = menu[i];
+    //先判断有没有children来决定是不是继续遍历，可实现深度优先遍历
+    if (item && item.children && item.children.length) {
+      //这里不能直接return this.loopMenuDeep(item.children, path);
+      //要对返回值做单独判断，在决定是否返回这个返回值
+      let res = this.loopMenuDeep(item.children, path);
+      if (res) {
+        this.menuSourceTree.push(item);
+        return res;
+      }
+    }
+    //若先对当前项做判断则可以做到广度优先遍历，不过要先执行外层的for，同时存下children数组，最后遍历children数组
+    else if (item.type == path) {
+      this.menuSourceTree.push(item);
+      return item;
+    }
+  }
+}
